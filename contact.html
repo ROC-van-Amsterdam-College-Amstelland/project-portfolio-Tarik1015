@@ -1,1 +1,56 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>home</title>
+</head>
+<body style="background-image: none"></body>
+    <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="over-mij.html">Overmij</a></li>
+        <li><a href="projecten.html">Projecten/Vaardigheden</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="nieuws.html">Nieuws</a></li>
+    </ul>
+    <br><br><br><br><div class="padding-64 content text-grey" id="contact">
+            <h2 class="text-light-grey">Contact Me</h2>
+            <hr style="width:200px" class="opacity">
+        
+            <div class="section">
+              <p><i class="fa fa-map-marker fa-fw text-white xxlarge margin-right"></i> Mijdrecht, NL</p>
+              <p><i class="fa fa-phone fa-fw text-white xxlarge margin-right"></i> Phone: +31 0629486219</p>
+              <p><i class="fa fa-envelope fa-fw text-white xxlarge margin-right"> </i> Email: Tarikc2003@outlook.com</p>
+            </div><br>
+            <p>Lets get in touch. Send me a message:</p>
+        
+            <form>
+              <p><input id="name" class="input padding-16" type="text" placeholder="Name" required name="Name"></p>
+              <p><input id="email" class="input padding-16" type="text" placeholder="Email" required name="Email"></p>
+              <p><input id="subject" class="input padding-16" type="text" placeholder="Subject" required name="Subject"></p>
+              <p><input id="body" class="input padding-16" type="text" placeholder="Message" required name="Message"></p>
+              <p>
+                <button class="button light-grey padding-large" type="submit" onclick="senMail()">
+                  <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                </button>
+              </p>
+            </form>
+            <script>
+                function senMail() {
+                    var name = document.getElementById("name").value;
+                    var email = document.getElementById("email").value;
+                    var subject = document.getElementById("subject").value;
+                    var body = document.getElementById("body").value;
+                    var link = "mailto:Tarikc2003@outlook.com"
+                        +"?cc="+email
+                        +"&subject=" + escape(subject)
+                        +"&body=" + escape(name+ " | "+ body);
+                    
+                    window.location.href = link;
+                }
+            </script>
+    </div>
+</body>
+</html>
